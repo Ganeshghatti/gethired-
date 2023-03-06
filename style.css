@@ -1,0 +1,525 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'League Spartan', sans-serif;
+    font-size: 0.95rem;
+}
+.container {
+    display: flex;
+    background-color: white;
+    width: 1200px;
+    flex-direction: column;
+    gap: 5vw;
+    align-items: center;
+    margin: auto;
+    padding-top: 5vw;
+    /* border: 5px black solid; */
+}
+
+.headderdiv {
+    background-color: rgb(94, 164, 164);
+}
+
+.headderimg {
+    width: 100vw;
+}
+
+.headderimgmobile {
+    display: none;
+    width: 100vw;
+}
+
+.createmorediv {
+    padding: 6vw 0 0 0;
+    margin: auto;
+}
+
+.createmorebutton {
+    padding: 1rem;
+    border: none;
+    cursor: pointer;
+    border-radius: 1rem;
+}
+.customjoblist,.joblistone,.joblisttwo {
+    display: flex;
+    flex-direction: row;
+    box-shadow: 5px 5px 5px 1px rgba(100, 186, 187, 0.5);
+    width: 100%;
+    border-left: 5px solid rgb(100, 185, 187);
+    display: none;
+    cursor: pointer;
+    height: 23vh;
+    /* border: 5px solid red; */
+}
+.customjoblist:hover{
+    width: 102%;
+}
+.joblistone:hover{
+    width: 102%;
+}
+.joblisttwo:hover{
+    width: 102%;
+}
+.joblistone,.joblisttwo{
+    display: flex;
+    flex-direction: row;
+    box-shadow: 5px 5px 5px 1px rgba(100, 186, 187, 0.5);
+    width: 100%;
+    border-left: 5px solid rgb(100, 185, 187);
+}
+
+.leftdiv ,.leftdivone,.leftdivtwo{
+    display: flex;
+    flex-direction: row;
+    width: 600px;
+    /* border: 5px blue solid; */
+}
+.profilephotodivparent,.profilephotodivparentone,.profilephotodivparenttwo{
+    /* padding:2vw; */
+    width: 210px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* border: 5px brown solid; */
+}
+.profilephotodiv ,.profilephotodivone,.profilephotodivtwo{
+    height: 100px;
+    width: 100px;
+    background-color: #bbb;
+    border-radius: 50%;
+    /* border: 2px solid grey; */
+}
+.profilephotodivsecondchild{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 5;
+}
+#file{
+    z-index: 5;
+}
+#output{
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    border: none;
+    display: none;
+}
+.uploadlogoskelton{
+    width: 5vw;
+}
+.uploadlogotext{
+    font-size: clamp(0.6rem, 1vw, 0.9rem);
+}
+.textdiv,.textdivone ,.textdivtwo{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding-left: 2vw;
+    /* border: 5px solid pink; */
+    gap: 1vw;
+    justify-content: center;
+}
+
+.companynametext,.companynametextone,.companynametexttwo,.rightdiv,.rightdivone ,.rightdivtwo{
+    color: hsl(180, 29%, 50%);
+    font-weight: 700;
+}
+
+.companynametext,.companynametextone,.companynametexttwo {
+    font-size: clamp(0.8rem, 1.2vw, 1.4rem);
+    display: inline-block;
+    background-color: rgb(240, 246, 244);
+}
+
+.jobroletext ,.jobroletextone,.jobroletexttwo{
+    font-size: clamp(1.3rem, 1.4vw, 1.4rem);
+    font-weight: 700;
+    color: black;
+}
+
+.postedtimeagoandworkinghoursandjoblocation,.postedtimeagoandworkinghoursandjoblocationone,.postedtimeagoandworkinghoursandjoblocationtwo {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 15vw;
+    color: grey;
+    width: 60%;
+}
+
+.fullstop {
+    position: relative;
+    bottom: 0.25vw;
+}
+.hrtagbetweenleftrightdiv{
+    display: none;
+}
+.rightdiv,.rightdivone,.rightdivtwo{
+    width: 600px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 3vw;
+}
+.skillsdiv{
+    width: 450px;
+    height: 50%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+    gap: 2vw;
+}
+.sameclass {
+    background-color: rgb(240, 246, 244);
+    display: none;
+    padding: 0;
+}
+
+.overlay {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: none;
+}
+
+.permissionfornewjobpost {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    width: 25vw;
+    height: 25vh;
+    background-color: white;
+    background-image: url('/bg-header-mobile.png');
+    justify-content: space-between;
+    background-size: cover;
+}
+
+.yesandcancelbutton {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 100%;
+}
+.yesandcancelbutton .cancelbuttononareusureuwanttopostajobtext:hover{
+    border: 3px solid  rgb(100, 185, 187);
+}
+.yesandcancelbutton .yesbuttononareusureuwanttopostajobtext:hover{
+    border: 3px solid  white;
+}
+.postthisjobdiv,.areareusureuwanttopostajobdiv{
+    padding: 0 0 0 1vw;
+}
+.areareusureuwanttopostajobdiv p{
+    color:black ;
+    font-weight: 600;
+}
+.postthisjobdiv p{
+    padding-top: 1vw;
+    font-size: clamp(0.8rem,2vw,1.4rem);
+    font-weight: 700;
+}
+
+.jobrolealert,.companynamealert,.workinghoursalert,.joblocationalert,.requiredskillslessalert,.requiredskillsmorealert{
+    color: red;
+    display: none;
+    font-family: 'Teko', sans-serif;
+    font-weight: 400;
+}
+
+/* SECOND PAGE */
+
+.parentcontainerofdatainput{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    background-image: url('/5026563.jpg');
+}
+.formcontainerdiv{
+    display: flex;
+    flex-direction: column;
+    width: 850px;
+    height: 550px;
+    border: 2px grey solid;
+    border-radius: 1rem;
+    background-color: rgba(128, 128, 128, 0.712);
+    color: black;
+    gap: 0.6em;
+}
+.jobdetailssecondpage{
+    font-size: clamp(1.5rem, 4vw, 2rem);
+    font-weight: 600;
+    padding: 3vh 0 1.5vh 6vw;
+}
+.labelsameclass{
+    display: flex;
+    flex-direction: column;
+}
+
+.inputareadivforcompanyname,.dropdowndivforjobrole,.dropdownforworkinghours,.dropdownandinputareaforjoblocation,.submitandcancelbuttondiv,
+.checkboxforskills{
+    padding: 0 15vw 0 6vw;
+    display: flex;
+    align-items: center;
+}
+.inputareadivforcompanyname label,.dropdowndivforjobrole label,.dropdownforworkinghours label,.dropdownandinputareaforjoblocation label,.checkboxforskills label{
+    font-size:clamp(1rem, 1.2vw, 1.1rem);
+    width: 300px;
+    margin: 0 0 1em 1em;
+}
+#jobrole,#joblocation,#workinghours{
+    cursor: pointer;
+}
+#companyname,#jobrole,#joblocation,#workinghours,.checkboxforskillschild{
+    margin-left: 0%;
+}
+#companyname{
+    padding: 0.4rem 3rem;
+}
+#jobrole{
+    padding: 0.4rem 2.2rem;
+}
+#workinghours{
+    padding: 0.4rem 8.8rem 0.4rem 2.5rem;
+}
+#joblocation{
+    padding: 0.4rem 9.2rem 0.4rem 2.5rem;
+}
+hr{
+    width: 45em;
+    margin:0 auto;
+}
+.checkboxforskillschild{
+    display: flex;
+    flex-wrap: wrap;
+    gap:1em;
+}
+.checkboxforskillschild div input,.checkboxforskillschild div label{
+    cursor: pointer;   
+}
+.checkboxforskillschild div label{
+    font-size:  clamp(1rem, 1vw, 1.3rem);
+}
+.checkboxforskills{
+    padding: 1vw 5vw 1vw 6vw;
+}
+.submitandcancelbuttondiv{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: flex-start;
+    padding: 0.5vw 15vw 0 6vw;
+}
+.yesandcancelbutton button{
+    border: none;
+    background-color: white;
+    border: grey 1px solid;
+    cursor: pointer;
+}
+.submitandcancelbuttondiv button{
+    border: none;
+    border-radius: 0.4rem;
+    padding:1vw 3vw;
+    cursor: pointer;
+}
+.cancelbuttononareusureuwanttopostajobtext,.yesbuttononareusureuwanttopostajobtext{
+    width: 50%;
+    font-weight: 600;
+    padding: 0.6vw;
+}
+.cancelbuttononareusureuwanttopostajobtext{
+    background-color: white;
+    color: black;
+}
+.yesandcancelbutton .yesbuttononareusureuwanttopostajobtext{
+    background-color: rgb(100, 185, 187);
+    color: white;
+}
+
+
+@media screen and (max-width: 1200px) {
+    .container {
+        width: 96vw;
+    }
+
+    .customjoblist ,.joblistone,.joblisttwo {
+        width: 96vw;
+    }
+
+    .leftdiv ,.leftdivone,.leftdivtwo {
+        width: 48vw;
+    }
+
+    .rightdiv,.rightdivone,.rightdivtwo {
+        width: 48vw;
+    }
+}
+@media screen and (max-width: 950px) {
+    .postedtimeagoandworkinghoursandjoblocation,.postedtimeagoandworkinghoursandjoblocationone,.postedtimeagoandworkinghoursandjoblocationtwo {
+        width: 85%;
+    }
+}
+@media screen and (max-width: 850px) {
+    .formcontainerdiv{
+        width: 98vw;
+    }
+    .postedtimeagoandworkinghoursandjoblocation,.postedtimeagoandworkinghoursandjoblocationone,.postedtimeagoandworkinghoursandjoblocationtwo {
+        width: 95%;
+        justify-content: space-around;
+    }
+}
+
+@media screen and (max-width: 650px) {
+    .container{
+        gap: 10vw;
+        flex-wrap: wrap;
+    }
+    .customjoblist {
+        width: 96vw;
+    }
+
+    .leftdiv ,.leftdivone,.leftdivtwo {
+        width: 96vw;
+        margin: auto;
+        justify-content: center;
+    }
+
+    .rightdiv,.rightdivone,.rightdivtwo {
+        width: 96vw;
+        margin: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10vw;
+    }
+
+    .customjoblist ,.joblistone,.joblisttwo{
+        flex-wrap: wrap;
+        border-left: 5px solid rgb(100, 185, 187);
+        height: 28vh;
+    }
+
+    .headderimgmobile {
+        display: flex;
+    }
+    .headderimg {
+        display: none;
+    }
+    .profilephotodivparent,.profilephotodivparentone,.profilephotodivparenttwo{
+        padding:0;
+        width:30vw;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 6.5vw 0 0 0;
+        z-index: 10;
+    }
+    .profilephotodiv ,.profilephotodivone,.profilephotodivtwo{
+        height: 50px;
+        width: 50px;
+    }
+    .textdiv,.textdivone,.textdivtwo{
+        width: 70vw;
+        justify-content: center;
+        gap: 2vw;
+        padding-left: 5vw;
+    }
+    
+}
+@media screen and (max-width: 640px){
+    .parentcontainerofdatainput{
+        align-items: flex-start;
+    }
+    .inputareadivforcompanyname,.dropdowndivforjobrole,.dropdownforworkinghours,.dropdownandinputareaforjoblocation{
+        flex-direction: column;
+        /* align-items: flex-start; */
+    }
+    .submitandcancelbuttondiv{
+        padding: 0;
+        flex-wrap: wrap-reverse;
+    }
+    .submitandcancelbuttondiv button{
+        width: 95vw;
+        padding: 3vw 0;
+    }
+    .postedtimeagoandworkinghoursandjoblocation,.postedtimeagoandworkinghoursandjoblocationone,.postedtimeagoandworkinghoursandjoblocationtwo {
+        width: 55vw;
+        justify-content: space-around;
+        gap: 2vw;
+    }
+    .hrtagbetweenleftrightdiv{
+        display: flex;
+        width: 85%;
+        margin: auto;
+        color: grey;
+        justify-content: center;
+        align-items: center;
+    }
+    .skillsdiv{
+        width: 95vw;
+    }
+    .checkboxforskills{
+        flex-direction: column;
+        padding: 0;
+    }
+    .parentcontainerofdatainput{
+        align-items: flex-start;
+    }
+    .inputareadivforcompanyname,.dropdowndivforjobrole,.dropdownforworkinghours,.dropdownandinputareaforjoblocation,.checkboxforskills{
+        flex-direction: column;
+        /* align-items: flex-start; */
+        padding: 0 0 0 4vw;
+        justify-content: flex-start;
+        align-items: flex-start;
+        margin: auto;
+    }
+    .submitandcancelbuttondiv{
+        padding: 0;
+        justify-content: space-around;
+    }
+    .postedtimeagoandworkinghoursandjoblocation,.postedtimeagoandworkinghoursandjoblocationone,.postedtimeagoandworkinghoursandjoblocationtwo {
+        width: 55vw;
+        justify-content: space-around;
+        gap: 2vw;
+    }
+    .hrtagbetweenleftrightdiv{
+        display: flex;
+        width: 85%;
+        margin: auto;
+        color: grey;
+        justify-content: center;
+        align-items: center;
+    }
+    .skillsdiv{
+        width: 95vw;
+    }
+    #companyname,#jobrole,#workinghours,#joblocation{
+        width: 92vw;
+        margin: auto;
+        padding: 5vw 0;
+    }
+    .checkboxforskills{
+        flex-direction: column;
+    }
+    .formcontainerdiv{
+        height: 100vh;
+    }
+    .checkboxforskillschild{
+        gap: 1.5em;
+        padding: 0 10vw;
+    }
+    .submitbuttonsecondpage{
+        border: 2px grey solid;
+        background-color:rgb(100, 185, 187) ;
+    }
+    
+}

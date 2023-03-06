@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+    <title>Job Listings</title>
+    <link rel="stylesheet" href="style.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@100;200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div class="parentcontainerofdatainput">
+        <form>
+            <div class="formcontainerdiv">
+                <p class="jobdetailssecondpage">
+                    Job Details
+                </p>
+                <div class="inputareadivforcompanyname">
+                    <label class="labelsameclass">
+                        <label for="companyname">Company name:</label>
+                        <label for="companyname" class="companynamealert">*Enter Name</label>
+                    </label>
+                    <input type="text" placeholder="enter company name" id="companyname">
+                </div>
+                <div class="dropdowndivforjobrole">
+                    <label class="labelsameclass">
+                        <label for="jobrole">Choose a Job Role:</label>
+                        <label for="jobrole" class="jobrolealert">*Enter Job</label>
+                    </label>
+                    <select name="jobrole" id="jobrole">
+                        <option value="none">none</option>
+                        <option value="Full Stack Developer">Full Stack Developer</option>
+                        <option value="Senior Front End Developer">Senior Front End Developer</option>
+                        <option value="Junior Backend Developer">Junior Backend Developer</option>
+                        <option value="Junior Front End Developer">Junior Front End Developer</option>
+                        <option value="Junior Full Stack Developer">Junior Full Stack Developer</option>
+                        <option value="Mern Stack Developer">Mern Stack Developer</option>
+                        <option value="WordPress Developer">WordPress Developer</option>
+                        <option value="Web Analyst">Web Analyst</option>
+                        <option value="Software Engineer">Software Engineer</option>
+                    </select>
+                </div>
+
+                <div class="dropdownforworkinghours">
+                    <label class="labelsameclass">
+                        <label for="workinghours">Choose Working Hours:</label>
+                        <label for="workinghours" class="workinghoursalert">*Enter Work Hours</label>
+                    </label>
+                    <select name="workinghours" id="workinghours">
+                        <option value="none">none</option>
+                        <option value="Part Time">Part Time</option>
+                        <option value="Full Time">Full Time</option>
+                        <option value="Contract">Contract</option>
+                    </select>
+                </div>
+
+                <div class="dropdownandinputareaforjoblocation">
+                    <label class="labelsameclass">
+                        <label for="joblocation">Choose work place:</label>
+                        <label for="joblocation" class="joblocationalert">*Job Location</label>
+                    </label>
+                    <select name="joblocation" id="joblocation">
+                        <option value="none">none</option>
+                        <option value="Remote">Remote</option>
+                        <option value="In_Office">In Office</option>
+                    </select>
+                </div>
+
+                <div class="checkboxforskills">
+                    <label class="labelsameclass">
+                        <label for="requiredskills">Required Skills:</label>
+                        <label for="requiredskills" class="requiredskillslessalert">*Enter Atleast 3 skills</label>
+                        <label for="requiredskills" class="requiredskillsmorealert">*Don't Enter more than 8 skills</label>
+                    </label>
+                    
+                    <div class="checkboxforskillschild">
+                        <div>
+                            <input type="checkbox" id="html" name="html" onclick="myFunction()">
+                            <label for="html"> HTML</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="css" name="css" onclick="myFunction()">
+                            <label for="css"> CSS</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="javascript" name="javascript" onclick="myFunction()">
+                            <label for="javascript"> Javascript</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="reactjs" name="reactjs" onclick="myFunction()">
+                            <label for="reactjs"> React js</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="nodejs" name="nodejs" onclick="myFunction()">
+                            <label for="nodejs"> node Js</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="nextjs" name="nextjs" onclick="myFunction()">
+                            <label for="nextjs"> next Js</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="angularjs" name="angularjs" onclick="myFunction()">
+                            <label for="angularjs"> angular Js</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="vuejs" name="vuejs" onclick="myFunction()">
+                            <label for="vuejs"> Vue Js</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="expressjs" name="expressjs" onclick="myFunction()">
+                            <label for="expressjs"> express Js</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="advancedjavascript" name="advancedjavascript"
+                                onclick="myFunction()">
+                            <label for="advancedjavascript">Advanced Javascript</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="php" name="php" onclick="myFunction()">
+                            <label for="php"> PHP</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="laravel" name="laravel" onclick="myFunction()">
+                            <label for="laravel"> Laravel</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="flutter" name="flutter" onclick="myFunction()">
+                            <label for="flutter"> Flutter</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="api" name="api" onclick="myFunction()">
+                            <label for="api"> API</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="c" name="c" onclick="myFunction()">
+                            <label for="c"> C</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="csharp" name="csharp" onclick="myFunction()">
+                            <label for="csharp"> C#</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="cplusplus" name="cplusplus" onclick="myFunction()">
+                            <label for="cplusplus"> C++</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="java" name="java" onclick="myFunction()">
+                            <label for="java"> Java</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="github" name="github" onclick="myFunction()">
+                            <label for="github"> Github</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="python" name="python" onclick="myFunction()">
+                            <label for="python"> Python</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="django" name="django" onclick="myFunction()">
+                            <label for="django"> Django</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="sql" name="sql" onclick="myFunction()">
+                            <label for="sql">SQL</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="mongodb" name="mongodb" onclick="myFunction()">
+                            <label for="mongodb"> mongo DB</label>
+                        </div>
+                    </div>
+                </div>
+                <hr>
+                <div class="submitandcancelbuttondiv">
+                    <div class="canceldivsecondpage">
+                        <button type="button" class="cancelbuttonsecondpage" onclick="cancelf()">Cancel</button>
+                    </div>
+                    <div class="submitdivsecondpage">
+                        <button type="button" class="submitbuttonsecondpage" onclick="submitf()">Submit</button>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <title>Job Listings</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@100;200;300;400;500;600;700;800;900&display=swap"
+    rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@100;200;300;400;500;600;700&display=swap"
+    rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Teko:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body onload="onloadd()">
+  <header>
+    <div class="headderdiv">
+      <img src="/bg-header-desktop.png" alt="headderimg" class="headderimg">
+      <img src="/bg-header-mobile.png" alt="headderimg" class="headderimgmobile">
+    </div>
+  </header>
+
+  <section>
+    <div class="container">
+      <div class="customjoblist">
+        <div class="leftdiv">
+          <div class="profilephotodivparent">
+            <div class="profilephotodiv">
+              <input type="file" accept="image/*" name="image" id="file" onchange="loadFile(event)"
+                style="display: none;">
+              <label for="file" style="cursor: pointer;">
+                <div class="profilephotodivsecondchild">
+                  <img src="/360_F_481134373_0W4kg2yKeBRHNEklk4F9UXtGHdub3tYk-removebg-preview.png"
+                    alt="uploadlogoskeleton" class="uploadlogoskelton">
+                  <p class="uploadlogotext">Upload Image</p>
+                </div>
+              </label>
+              <img id="output" alt="" style="cursor: pointer;" />
+            </div>
+          </div>
+          <div class="textdiv"  onclick="createmoref()">
+            <div class="companynamediv">
+              <p class="companynametext"></p>
+            </div>
+            <div class="jobrolediv">
+              <p class="jobroletext"></p>
+            </div>
+            <div class="postedtimeagoandworkinghoursandjoblocation">
+              <div class="postedtimeagodiv"></div>
+              <div><p class="fullstop">.</p></div>
+              <div class="workinghoursdiv"></div>
+              <div><p class="fullstop">.</p></div>
+              <div class="joblocationdiv"></div>
+            </div>
+          </div>
+        </div>
+        <hr class="hrtagbetweenleftrightdiv">
+        <div class="rightdiv"  onclick="createmoref()">
+          <div class="skillsdiv">
+            <div class="htmlskilldiv sameclass">
+              <p>HTML</p>
+            </div>
+            <div class="cssskilldiv sameclass">
+              <p>CSS</p>
+            </div>
+            <div class="javascriptskilldiv sameclass">
+              <p>Javascript</p>
+            </div>
+            <div class="reactjsskilldiv sameclass">
+              <p>React Js</p>
+            </div>
+            <div class="nodejsskilldiv sameclass">
+              <p>node Js</p>
+            </div>
+            <div class="nextjsskilldiv sameclass">
+              <p>next js</p>
+            </div>
+            <div class="angularjsskilldiv sameclass">
+              <p>angular Js</p>
+            </div>
+            <div class="vuejsskilldiv sameclass">
+              <p>Vue Js</p>
+            </div>
+            <div class="expressjsskilldiv sameclass">
+              <p>Express Js</p>
+            </div>
+            <div class="advancedjavascriptskilldiv sameclass">
+              <p>Advanced Javascript</p>
+            </div>
+            <div class="phpskilldiv sameclass">
+              <p>PHP</p>
+            </div>
+            <div class="laravelskilldiv sameclass">
+              <p>Laravel</p>
+            </div>
+            <div class="flutterskilldiv sameclass">
+              <p>Flutter</p>
+            </div>
+            <div class="apiskilldiv sameclass">
+              <p>api</p>
+            </div>
+            <div class="cskilldiv sameclass">
+              <p>C</p>
+            </div>
+            <div class="csharpskilldiv sameclass">
+              <p>C#</p>
+            </div>
+            <div class="cplusplusskilldiv sameclass">
+              <p>C++</p>
+            </div>
+            <div class="javaskilldiv sameclass">
+              <p>Java</p>
+            </div>
+            <div class="githubskilldiv sameclass">
+              <p>Github</p>
+            </div>
+            <div class="pythonskilldiv sameclass">
+              <p>Python</p>
+            </div>
+            <div class="djangoskilldiv sameclass">
+              <p>Django</p>
+            </div>
+            <div class="sqlskilldiv sameclass">
+              <p>SQL</p>
+            </div>
+            <div class="mongodbskilldiv sameclass">
+              <p>Mongo DB</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="joblistone">
+        <div class="leftdivone">
+          <div class="profilephotodivparentone">
+            <div class="profilephotodivone">
+              <img id="profilephotoimgone" src="/myhome.png" width="100%" alt="" />
+            </div>
+          </div>
+          <div class="textdivone">
+            <div class="companynamedivone">
+              <p class="companynametextone">MyHome</p>
+            </div>
+            <div class="jobroledivone">
+              <p class="jobroletextone">Junior Frontend Developer</p>
+            </div>
+            <div class="postedtimeagoandworkinghoursandjoblocationone">
+              <div class="postedtimeagodivone">3d ago</div>
+              <div><p class="fullstop">.</p></div>
+              <div class="workinghoursdivone">Part Time</div>
+              <div><p class="fullstop">.</p></div>
+              <div class="joblocationdivone">Remote</div>
+            </div>
+          </div>
+        </div>
+        <hr class="hrtagbetweenleftrightdiv">
+        <div class="rightdivone">
+          <div class="htmlskilldivone">
+            <p>HTML</p>
+          </div>
+          <div class="cssskilldivone">
+            <p>CSS</p>
+          </div>
+          <div class="javascriptskilldivone">
+            <p>Javascript</p>
+          </div>
+          <div class="reactjsskilldivone">
+            <p>React Js</p>
+          </div>
+        </div>
+      </div>
+      <div class="joblisttwo">
+        <div class="leftdivtwo">
+          <div class="profilephotodivparenttwo">
+            <div class="profilephotodivtwo">
+              <img id="profilephotoimgtwo" src="/loop-studios.png" width="100%" alt="" />
+            </div>
+          </div>
+          <div class="textdivtwo">
+            <div class="companynamedivtwo">
+              <p class="companynametexttwo">Loop Studios</p>
+            </div>
+            <div class="jobroledivtwo">
+              <p class="jobroletexttwo">Software Engineer</p>
+            </div>
+            <div class="postedtimeagoandworkinghoursandjoblocationtwo">
+              <div class="postedtimeagodivtwo">5d ago</div>
+              <div><p class="fullstop">.</p></div>
+              <div class="workinghoursdivtwo">Full Time</div>
+              <div><p class="fullstop">.</p></div>
+              <div class="joblocationdivtwo">In-Office</div>
+            </div>
+          </div>
+        </div>
+        <hr class="hrtagbetweenleftrightdiv">
+        <div class="rightdivtwo">
+          <div class="javaskilldivtwo">
+            <p>Java</p>
+          </div>
+          <div class="phpskilldivtwo">
+            <p>PHP</p>
+          </div>
+          <div class="sqlskilldivtwo">
+            <p>SQL</p>
+          </div>
+        </div>
+      </div>
+      <div class="createmoredivone">
+        <button type="button" class="createmorebutton" onclick="createmoref()">Create More!</button>
+      </div>
+    </div>
+  </section>
+  <div class="overlay">
+    <div class="permissionfornewjobpost">
+      <div class="postthisjobdiv">
+        <p class="postthisjob">Post this job?</p>
+      </div>
+      <div class="areareusureuwanttopostajobdiv">
+        <p class="areusureuwanttopostajobtext">Are you sure, You want to post this opportunity?</p>
+      </div>
+      <div class="yesandcancelbutton">
+        <button type="button" class="cancelbuttononareusureuwanttopostajobtext" onclick="cancelf()">Cancel</button>
+        <button type="button" class="yesbuttononareusureuwanttopostajobtext"
+          onclick="areusureuwanttopostajobf()">Yes!</button>
+      </div>
+    </div>
+  </div>
+  <script src="script.js"></script>
+  <script>
+    let profilephotodivsecondchild = document.getElementsByClassName("profilephotodivsecondchild")[0]
+    var loadFile = function (event) {
+      var image = document.getElementById('output');
+      image.style.display="flex"
+      image.src = URL.createObjectURL(event.target.files[0]);
+      profilephotodivsecondchild.style.display = "none"
+    };
+  </script>
+</body>
+
+</html>
