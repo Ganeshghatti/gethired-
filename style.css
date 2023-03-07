@@ -441,7 +441,7 @@ hr{
         gap: 2vw;
         padding-left: 5vw;
     }
-    hr{
+    .secondprojecthr{
         width: 100vw;
     }
     
@@ -532,7 +532,7 @@ hr{
         border: 2px grey solid;
         background-color:rgb(100, 185, 187) ;
     }
-    hr{
+    .secondprojecthr{
         width: 100vw;
     }
     .postthisjobdiv p{
