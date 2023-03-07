@@ -442,7 +442,8 @@ hr{
         padding-left: 5vw;
     }
     .secondprojecthr{
-        width: 100vw;
+        width: 90vw;
+        margin: auto;
     }
     
 }
@@ -533,7 +534,8 @@ hr{
         background-color:rgb(100, 185, 187) ;
     }
     .secondprojecthr{
-        width: 100vw;
+        width: 90vw;
+        margin: auto;
     }
     .postthisjobdiv p{
         font-size: clamp(1.3rem,1.5vw,1.6rem);
