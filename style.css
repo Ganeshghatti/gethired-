@@ -511,7 +511,7 @@ hr{
         flex-direction: column;
     }
     .formcontainerdiv{
-        height: 100vh;
+        min-height: 150vh;
     }
     .checkboxforskillschild{
         gap: 1.5em;
